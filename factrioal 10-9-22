@@ -1,3 +1,4 @@
+Compile and Execute the C program to find the Factorial of a positive integer (number) is the sum of multiplication of all the integers smaller than that positive integer. N! is denoted as factorial of N 
 #include <stdio.h>
 int main() 
 {
