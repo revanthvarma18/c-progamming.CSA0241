@@ -1,0 +1,53 @@
+ In an organization they decide to give bonus to all the employees on New Year. A 5% bonus on salary is given to the grade A workers and 10% bonus on salary to the grade B workers. Write a program to enter the salary and grade of the employee. If the salary of the employee is less than $10,000 then the employee gets an extra 2% bonus on salary Calculate the bonus that has to be given to the employee and print the salary that the employee will get.
+
+#include<stdio.h>
+int main()
+{
+	float s,salary,bonus;
+	char grade;
+	printf("Enter your grade = ");
+	scanf("%c",&grade);
+	if(grade=='A')
+	{
+		printf("Enter the salary = ");
+		scanf("%f",&salary);
+		if(salary>10000)
+		{
+			bonus=salary*0.5;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);
+		}
+		else 
+		{
+			bonus=salary*0.7;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);
+		}
+	}
+	else if(grade=='B')
+	{
+		printf("Enter the salary = ");
+		scanf("%f",&salary);
+		if(salary>10000)
+		{
+			bonus=salary*0.10;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);
+		}
+		else 
+		{
+			bonus=salary*0.10;
+			s=salary+bonus;
+			printf("The bonus amount = %f",bonus);
+			printf("\nThe total amount = %f",s);		
+		}
+	}
+	else 
+	{
+		printf("Invalid Input");
+	}
+	return 0;
+}
