@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+int main()
+{
+    int arr[500],i,j,n,temp,k,l;
+	printf("Enter the number of elements in the array = ");
+    scanf("%d",&n);
+    if(n>0)
+    {
+     printf("Enter a values in the array = ");
+    for(i=0;i<n;i++) 
+    {
+        scanf("%d",&arr[i]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<n;j++)
+        {
+            if(arr[i]>arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=i+1;j<i;j++)
+        {
+            if(arr[i]<arr[j])
+            {
+                temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
+            }
+        }
+    }
+
+    printf("\nsmallest element = ");
+    scanf("%d",&k);
+    printf("\nLargest element = ");
+    scanf("%d",&l);
+    if(k<=n and l<=n)
+    {
+	    printf("Smallest element = %d\n",arr[k-1]);
+	    printf("Largest number = %d\n",arr[l-1]);
+	    printf("Sum of the mth smallest and nth largest = %d\n",arr[k-1]+arr[l-1]);
+	    printf("Difference of the smallest and the largest = %d\n",arr[l-1]-arr[k-1]);
+	}
+	else 
+	{
+		printf("Invalid Input");
+	}
+}
+    else
+    {
+		printf("Invalid input");
+	}
+}
