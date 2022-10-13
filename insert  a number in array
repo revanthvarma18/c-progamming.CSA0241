@@ -1,0 +1,39 @@
+#include<stdio.h>
+int main()
+{
+   int s[100],p,i,n,v;
+   printf("Enter the total number of elements in array = ");
+   scanf("%d",&n);
+   if(n>0)
+   {
+	   printf("Enter the elements = ");
+	   for(i=0;i<n;i++)
+		{
+	      scanf("%d",&s[i]);
+		}
+		if(s[i]>0)
+		{
+		   printf("Enter the position = ");
+		   scanf("%d",&p);
+		   printf("enter the value to be Inserted = ");
+		   scanf("%d",&v);
+		   for(i=n-1;i>=p-1;i--)
+		    s[i+1]=s[i];
+		   	s[p-1]=v;
+		   printf("Array after inserting the value = ");
+		   for(i=0;i<=n;i++)
+			{
+		      printf("%d ",s[i]);
+		  	}
+	  	}
+	  	else 
+	  	{
+	  		printf("Invalid Input");
+		  }
+  }
+  else 
+  {
+  	printf("Invalid Input");
+  }
+   return 0;
+}
